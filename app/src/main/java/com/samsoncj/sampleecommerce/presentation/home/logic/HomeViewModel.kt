@@ -1,4 +1,4 @@
-package com.samsoncj.sampleecommerce.presentation.Home.logic
+package com.samsoncj.sampleecommerce.presentation.home.logic
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -26,6 +26,7 @@ class HomeViewModel @Inject constructor(
         ecommerceJob?.cancel()
         ecommerceJob = viewModelScope.launch {
             ecommerceUseCases.getProducts.invoke().onEach { result ->
+
                 when(result) {
                     is OverAllState.Success -> {
                         _state.value = state.value.copy(

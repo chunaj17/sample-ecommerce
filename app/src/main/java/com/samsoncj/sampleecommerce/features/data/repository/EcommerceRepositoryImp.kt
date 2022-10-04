@@ -16,7 +16,7 @@ class EcommerceRepositoryImp(
 ) : EcommerceRepository {
     override fun getProducts(): Flow<OverAllState<List<EcommerceModel>>> = flow {
         emit(OverAllState.Loading())
-
+        println("hello")
         val getProducts = dao.getProducts()
         emit(OverAllState.Loading(data = getProducts))
 

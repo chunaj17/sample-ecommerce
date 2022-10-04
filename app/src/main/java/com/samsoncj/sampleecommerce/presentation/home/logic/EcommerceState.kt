@@ -1,4 +1,4 @@
-package com.samsoncj.sampleecommerce.presentation.Home.logic
+package com.samsoncj.sampleecommerce.presentation.home.logic
 
 import com.samsoncj.sampleecommerce.features.domain.model.EcommerceModel
 
